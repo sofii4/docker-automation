@@ -53,7 +53,7 @@ jobs:
           radon cc ./models/product_model.py
 
 
-    test-order-service:
+  test-order-service:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
