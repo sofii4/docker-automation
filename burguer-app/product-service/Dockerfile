@@ -12,7 +12,8 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 # Instalar dependências do sistema (otimizado)
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential gcc \
+    build-essential \
+    gcc \
     && rm -rf /var/lib/apt/lists/*
 
 # ================================

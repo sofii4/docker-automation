@@ -52,7 +52,6 @@ jobs:
           pytest -v --cov=models --cov=services --cov=config --cov=controllers
           radon cc ./models/product_model.py
 
-
   test-order-service:
     runs-on: ubuntu-latest
     steps:
