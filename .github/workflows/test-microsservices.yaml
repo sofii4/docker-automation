@@ -76,4 +76,25 @@ jobs:
           pytest -v --cov=models --cov=services --cov=config --cov=controllers
           radon cc ./models/order_model.py
       
-    
+  test-user-service:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12.3'
+
+      - name: Install dependencies
+        working-directory: ./burguer-app/user-service
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Run tests
+        working-directory: ./burguer-app/user-service
+        run: |
+          pytest -v --cov=models --cov=services --cov=config --cov=controllers
+          radon cc ./models/user_model.py
