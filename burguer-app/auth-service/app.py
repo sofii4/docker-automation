@@ -11,14 +11,13 @@ load_dotenv()
 # Cria a instância da aplicação Flask
 app = Flask(__name__)
 
-secret_key = os.getenv("SECRET_KEY")
+secret_key = os.getenv("SECRET_KEY", "alura-secret-key-plano-b")
 
 print(f"SECRET_KEY carregada: {secret_key}")  # DEBUG: deve imprimir o valor correto
 
 
-
 #Define a chave secreta para a sessão
-app.secret_key = os.getenv("SECRET_KEY")
+app.secret_key = secret_key
 
 
 # Registra o blueprint de autenticação

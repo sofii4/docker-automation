@@ -1,4 +1,4 @@
-FROM mongo:6.0
+FROM mongo:4.4
 
 # Copia o script de inicialização
 COPY ./init-mongo.js /docker-entrypoint-initdb.d/
