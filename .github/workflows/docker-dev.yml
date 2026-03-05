@@ -32,7 +32,7 @@ jobs:
         run: echo "::add-mask::${{ secrets.MONGO_URI }}"
 
       # 5️⃣ Criar .env para todos os microsserviços
-      - name: Create .env files
+      - name: Create .env filesgi 
         working-directory: burguer-app
         run: |
           for service in user-service product-service order-service auth-service; do
