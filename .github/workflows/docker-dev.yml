@@ -3,7 +3,7 @@ name: Docker Dev Workflow
 on:
   push:
     branches:
-      - main
+      - aula-01
   pull_request:
 
 jobs:
@@ -25,7 +25,7 @@ jobs:
             sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
             sudo chmod +x /usr/local/bin/docker-compose
           fi
-          docker-compose --version
+          docker-compose -version
 
       # 4️⃣ Mascarar MONGO_URI secret
       - name: Mask MONGO_URI secret
